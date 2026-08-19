@@ -23,4 +23,5 @@ ultimo_nome
 #%%
 umtimo_nome_alt
 #%%
-ultimo_nome["nome"]
+ultimo_nome["nome"] #->type =DataFrame
+ultimo_nome["nome"].iloc[0] #->type = str
