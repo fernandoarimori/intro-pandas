@@ -90,6 +90,7 @@ df_customers[["UUID", "Name"]] #->dataframe
 colunas = df_customers.columns.to_list()
 colunas.sort()
 colunas
+#%%
 df_customers[colunas]
 df_customers = df_customers[colunas] #ALTERANDO O PROPRIO DATAFRAME
 df_customers
