@@ -52,7 +52,7 @@ df_transaction
 
 
 #%%
-df_user.to_sql("tb_test", engine, index=False)
+df_user.to_sql("tb_test", engine, index=False, if_exists="append")
 #%%
 pd.read_sql("tb_test", engine)
 #%%
@@ -69,5 +69,5 @@ pd.read_sql("tb_test", engine)
 query = "DROP TABLE IF EXISTS tb_test"
 
 with engine.connect() as conn:
-    conn.execute(query)
+    conn.exec_driver_sql(query)
     conn.commit()
