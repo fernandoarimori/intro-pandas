@@ -19,5 +19,6 @@ for i in data_list:
 #%%
 dfs[0]
 #%%
-homicidios_concat = pd.concat(dfs, axis=1).reset_index(0)
+homicidios_concat = pd.concat(dfs, axis=1).reset_index()
+homicidios_concat.columns
 homicidios_concat.to_csv("../data/exercise_export/concat_all_homicidios.csv", sep = ";", index=False)
